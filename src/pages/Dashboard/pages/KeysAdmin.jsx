@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getKeys, toggleKey, deleteKey } from "../../../services/api";
-import KeyModal from "../../../components/interface/Modal/KeyModal";
+import KeyModal from "../../../components/interface/Modal/keyModal";
 
 // 🔥 IMPORTANTE
 import { categories, categoryLabels } from "../../../constants/categories";
