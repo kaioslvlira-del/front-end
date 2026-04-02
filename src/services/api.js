@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/api";
+const API_URL = "https://back-end-1-drnh.onrender.com/api";
 
 export const getProducts = async () => {
   const res = await fetch(`${API_URL}/products`);
@@ -16,7 +16,7 @@ export const createProduct = async (data) => {
 };
 
 export const getProductById = async (id) => {
-  const res = await fetch(`http://localhost:3000/products/${id}`);
+  const res = await fetch(`${API_URL}/products/${id}`);
 
   if (!res.ok) {
     throw new Error("Produto não encontrado");
@@ -32,7 +32,7 @@ export const deleteProduct = async (id) => {
 };
 
 export const getProfile = async () => {
-  const res = await fetch(`${API_URL}/user/me`, {
+  const res = await fetch(`${API_URL}/auth/me`, {
     credentials: "include",
   });
 
@@ -64,6 +64,7 @@ export const getUsers = async (search = "", page = 1) => {
 
   return res.json();
 };
+
 export const toggleAdmin = async (id) => {
   const res = await fetch(`${API_URL}/user/users/${id}/admin`, {
     method: "PATCH",
