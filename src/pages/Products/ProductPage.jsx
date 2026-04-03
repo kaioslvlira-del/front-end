@@ -4,7 +4,7 @@ import { getProductById } from "../../services/api";
 
 import Header from "../../components/layout/Header/Header";
 import Footer from "../../components/layout/Footer/Footer";
-import Banner from "../../assets/images/Banner.png";
+import Banner from "../../assets/images/banner.png";
 
 const ProductPage = () => {
   const { id } = useParams();
